@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.liliankasem.demo1_speechdictation_oxford.MainActivity"
+    android:background="@drawable/backdrop2">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView2"
+        android:background="#700a0a0a"
+        android:layout_above="@+id/recognisedText"
+        android:layout_alignRight="@+id/hypothesisText"
+        android:layout_alignEnd="@+id/hypothesisText"
+        android:layout_alignLeft="@+id/hypothesisText"
+        android:layout_alignStart="@+id/hypothesisText"
+        android:layout_alignTop="@+id/hypothesisText" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:background="#700a0a0a"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="40dp"
+        android:layout_alignLeft="@+id/recognisedText"
+        android:layout_alignStart="@+id/recognisedText"
+        android:layout_alignRight="@+id/recognisedText"
+        android:layout_alignEnd="@+id/recognisedText"
+        android:layout_alignBottom="@+id/txt_average" />
+
+    <EditText
+        android:id="@+id/hypothesisText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:textSize="25dp"
+        android:textColor="#ffffff"  />
+
+    <EditText
+        android:id="@+id/recognisedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:textSize="25dp"
+        android:layout_alignLeft="@+id/hypothesisText"
+        android:layout_alignStart="@+id/hypothesisText"
+        android:layout_below="@+id/hypothesisText"
+        android:layout_above="@+id/txt_wordsmin"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/txt_average"
+        android:textColor="#279b35"
+        android:textStyle="bold"
+        android:text="Average"
+        android:gravity="right"
+        android:textAlignment="gravity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/num_wordsmin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/num_wordsmin"
+        android:layout_toStartOf="@+id/num_wordsmin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/num_wordsmin"
+        android:textColor="#279b35"
+        android:textStyle="bold"
+        android:text="0"
+        android:gravity="right"
+        android:textAlignment="gravity"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_toLeftOf="@+id/txt_wordsmin"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Words Per Minute"
+        android:id="@+id/txt_wordsmin"
+        android:textColor="#279b35"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/num_wordsmin"
+        android:layout_alignTop="@+id/num_wordsmin"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_marginRight="10dp" />
+
+</RelativeLayout>
